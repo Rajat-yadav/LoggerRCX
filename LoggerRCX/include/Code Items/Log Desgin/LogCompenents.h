@@ -1,5 +1,5 @@
-#ifndef _LOGCOMPENENTS_H
-#define _LOGCOMPENENTS_H
+#ifndef _LOGCOMPONENTS_H
+#define _LOGCOMPONENTS_H
 
 #ifndef _LOGTYPE_H 
 	#include "Code Items/Defines/Helpers/LogType.h"

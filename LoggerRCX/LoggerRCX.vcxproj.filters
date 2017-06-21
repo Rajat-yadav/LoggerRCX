@@ -33,9 +33,6 @@
     <ClInclude Include="include\Code Items\Defines\WinPlatformSDK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Code Items\Exports\ExportInf.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Code Items\Log Desgin\LogCompenents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -45,9 +42,24 @@
     <ClInclude Include="include\Logger\Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Code Items\Log Desgin\ColourItems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Logger\Main\LoggerRCXmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Code Items\Defines\NullDefines\NullDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Code Items\Defines\Helpers\DeleteOperators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Logger\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Logger\Main\LoggerRCXmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

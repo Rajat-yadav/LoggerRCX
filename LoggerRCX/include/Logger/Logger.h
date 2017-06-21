@@ -26,10 +26,17 @@
 	#include "Code Items/Defines/WinPlatformSDK.h"
 #endif // _WINPLATFORMSDK_H
 
-#ifndef _EXPORTINF_H 
-	#include "Code Items/Exports/ExportInf.h"
-#endif // _EXPORTINF_H
+#ifndef _LOGCOMPONENTS_H 
+	#include "Code Items/Log Desgin/LogCompenents.h"
+#endif // _LOGCOMPONENTS_H
 
+#ifndef _COLOURITEMS_H
+	#include "Code Items/Log Desgin/ColourItems.h"
+#endif // _COLOURITEMS_H
+
+#ifndef _DELETEOPERATORS_H 
+	#include "Code Items/Defines/Helpers/DeleteOperators.h"
+#endif // _DELETEOPERATORS_H
 
 class Logger
 {
@@ -37,12 +44,31 @@ public:
 	LOGGERTARGET Logger();
 	LOGGERTARGET ~Logger();
 
-	LOGGERTARGET void Log(std::tstring LogObject,std::tstring LogFunctionName,std::tstring LogFileName,std::tstring LogMeassage,LogType );
-	LOGGERTARGET void Log();
-	LOGGERTARGET void Log();
-private:
+	LOGGERTARGET virtual void Log(std::tstring LogErrorCode, std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
+								  std::tstring LogFileName, int LogLineNum, LogType logtype);
+	LOGGERTARGET virtual void Log(std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
+								  std::tstring LogFileName, int LogLineNum, LogType logtype);
+	LOGGERTARGET virtual bool Initialize();
+	LOGGERTARGET virtual bool ShutDown();
 
+	LOGGERTARGET virtual void Log(std::tstring LogObject, std::tstring LogMessage,
+		                          std::tstring LogFileName,int LogLineNum, LogType logtype);
+	LOGGERTARGET virtual void Log(std::tstring LogObject,std::tstring LogMessage,std::tstring LogFileName,LogType logtype);
+protected:
+	std::tstring RCX_LogData_LogErrorCode;
+	std::tstring RCX_LogData_LogObject;
+	std::tstring RCX_LogData_LogMessage;
+	std::tstring RCX_LogData_LogFunctionName;
+	std::tstring RCX_LogData_LogFileName;
+	int RCX_LogData_LogLineNum;
+	
+	bool IsLoggerInitialized;
+	bool IsLoggerShuttedDown;
+
+	friend bool LOGGERTARGET SetLoggerInitialized(Logger* logger);
+	friend bool LOGGERTARGET SetLoggerInitialized(Logger& logger);
+	friend bool LOGGERTARGET ShutDownLogger(Logger* logger);
+	friend bool LOGGERTARGET CheckLoggerIsInitialized(Logger* logger);
+	friend bool LOGGERTARGET CheckLoggerIsInitialized(Logger& logger);
 };
-
 #endif // _LOGGER_H
-
