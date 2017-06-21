@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Code Items\Defines\fstream.h" />
+    <ClInclude Include="include\Code Items\Defines\Helpers\LogType.h" />
+    <ClInclude Include="include\Code Items\Defines\iostream.h" />
+    <ClInclude Include="include\Code Items\Defines\string.h" />
+    <ClInclude Include="include\Code Items\Defines\stringstream.h" />
+    <ClInclude Include="include\Code Items\Defines\WinPlatformSDK.h" />
+    <ClInclude Include="include\Code Items\DLL.h" />
+    <ClInclude Include="include\Code Items\Exports\ExportInf.h" />
+    <ClInclude Include="include\Code Items\Log Desgin\LogCompenents.h" />
+    <ClInclude Include="include\Logger\Logger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Logger\Logger.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{0df3fe47-9c1f-42d3-8177-0019a9587056}</ProjectGuid>
