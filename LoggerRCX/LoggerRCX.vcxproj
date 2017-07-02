@@ -18,14 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\CodeItems\Defines\fstream.h" />
-    <ClInclude Include="include\CodeItems\Defines\Iostream.h" />
-    <ClInclude Include="include\CodeItems\Defines\string.h" />
-    <ClInclude Include="include\CodeItems\Defines\stringstream.h" />
-    <ClInclude Include="include\CodeItems\Defines\WinPlatformSDK.h" />
-    <ClInclude Include="include\CodeItems\DLL.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{0df3fe47-9c1f-42d3-8177-0019a9587056}</ProjectGuid>
