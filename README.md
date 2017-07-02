@@ -1,5 +1,5 @@
-# LoggerRCX
-# All in one open source solution for Logging.
+#  LoggerRCX
+## All in one open source solution for Logging.
 
 LoggerRCX is a open source solution for Logging.
 
@@ -9,6 +9,6 @@ Curruntly it is limited to Windows Platorm later we will add Support for Linux a
 LoggerRCX supports five differernt types of Logging styles. That are Implemented in the form of different classes which are Inherited 
 From the main Class Logger.
 
-For Documentation refer READMEDOCUMENTATION.md
+For Documentation refer [READMEDOCUMENTATION.md]()
 
 For Contacting me refer my Gmail rajatkumarkhola@gmail.com
