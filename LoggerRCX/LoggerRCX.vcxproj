@@ -19,6 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\CodeItems\Defines\fstream.h" />
+    <ClInclude Include="include\CodeItems\Defines\Iostream.h" />
+    <ClInclude Include="include\CodeItems\Defines\string.h" />
+    <ClInclude Include="include\CodeItems\Defines\stringstream.h" />
+    <ClInclude Include="include\CodeItems\Defines\WinPlatformSDK.h" />
     <ClInclude Include="include\CodeItems\DLL.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
