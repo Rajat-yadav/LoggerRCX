@@ -54,12 +54,18 @@
     <ClInclude Include="include\Code Items\Defines\Helpers\DeleteOperators.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Logger\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Logger\Main\LoggerRCXmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -10,17 +10,9 @@
 	#include "Code Items/Defines/iostream.h"
 #endif // _IOSTREAM_H
 
-#ifndef _FSTREAM_H
-	#include "Code Items/Defines/fstream.h"
-#endif // _FSTREAM_H
-
 #ifndef _STRING_H 
 	#include "Code Items/Defines/string.h"
 #endif // _STRING_H
-
-#ifndef _STRINGSTREAM_H 
-	#include "Code Items/Defines/stringstream.h"
-#endif // _STRINGSTREAM_H
 
 #ifndef _WINPLATFORMSDK_H 
 	#include "Code Items/Defines/WinPlatformSDK.h"
@@ -44,26 +36,40 @@ public:
 	LOGGERTARGET Logger();
 	LOGGERTARGET ~Logger();
 
-	LOGGERTARGET virtual void Log(std::tstring LogErrorCode, std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
+	virtual LOGGERTARGET void Log(std::tstring LogErrorCode, std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
 								  std::tstring LogFileName, int LogLineNum, LogType logtype);
-	LOGGERTARGET virtual void Log(std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
+	virtual LOGGERTARGET void Log(std::tstring LogObject, std::tstring LogMessage, std::tstring LogFunctionName,
 								  std::tstring LogFileName, int LogLineNum, LogType logtype);
-	LOGGERTARGET virtual bool Initialize();
-	LOGGERTARGET virtual bool ShutDown();
+	virtual LOGGERTARGET bool Initialize();
+	virtual LOGGERTARGET  bool ShutDown();
 
-	LOGGERTARGET virtual void Log(std::tstring LogObject, std::tstring LogMessage,
+	virtual LOGGERTARGET  void Log(std::tstring LogObject, std::tstring LogMessage,
 		                          std::tstring LogFileName,int LogLineNum, LogType logtype);
-	LOGGERTARGET virtual void Log(std::tstring LogObject,std::tstring LogMessage,std::tstring LogFileName,LogType logtype);
+	virtual LOGGERTARGET  void Log(std::tstring LogObject,std::tstring LogMessage,std::tstring LogFileName,LogType logtype);
 protected:
 	std::tstring RCX_LogData_LogErrorCode;
+	std::tstring RCX_LogData_LogErrorCode_InitialPoint;
+	std::tstring RCX_LogData_LogErrorCode_FinalPoint;
 	std::tstring RCX_LogData_LogObject;
 	std::tstring RCX_LogData_LogMessage;
 	std::tstring RCX_LogData_LogFunctionName;
 	std::tstring RCX_LogData_LogFileName;
 	int RCX_LogData_LogLineNum;
-	
 	bool IsLoggerInitialized;
 	bool IsLoggerShuttedDown;
+
+	#define TrackLiteralWLog "[ " <<RCX_LogData_LogErrorCode_InitialPoint<<"."<<RCX_LogData_LogErrorCode_FinalPoint<< "] "
+	#define WARNL   " <Warning> "
+	#define ERROL   " <Error> "
+	#define TODOL   " <Todo> "
+	#define INFOL   " <Info "
+	#define COLON   ":"
+	#define COLONL  ": "
+	#define LogComponents RCX_LogData_LogObject
+	#define LogFileName   RCX_LogData_LogFileName
+	#define LogLineNum    RCX_LogData_LogLineNum
+	#define LogFunctionName RCX_LogData_LogFunctionName
+	#define LogMessage     RCX_LogData_LogMessage
 
 	friend bool LOGGERTARGET SetLoggerInitialized(Logger* logger);
 	friend bool LOGGERTARGET SetLoggerInitialized(Logger& logger);

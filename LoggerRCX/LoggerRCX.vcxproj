@@ -32,10 +32,12 @@
     <ClInclude Include="include\Code Items\Log Desgin\LogCompenents.h" />
     <ClInclude Include="include\Logger\Logger.h" />
     <ClInclude Include="include\Logger\Main\LoggerRCXmain.h" />
+    <ClInclude Include="WLog.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Logger\Logger.cpp" />
     <ClCompile Include="src\Logger\Main\LoggerRCXmain.cpp" />
+    <ClCompile Include="WLog.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
